@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src='js/scroll.js'></script>
+    <script type="text/javascript" src='js/color.js'></script>
+    <style type="text/css">
+        .bcon{
+            height: 270px;
+            width: 350px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+        }
+        .bcon .title{
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            height: 35px;
+        }
+        .bcon b{ 
+            font-size: 16px;
+            border-top:2px solid #63B8FF; 
+            padding:5px 10px; 
+            display:inline-block;
+        }
+        .bcon a{
+            float: right;
+            font-size: 14px;
+            line-height: 35px;
+            color: rgb(170, 170, 170);
+            text-decoration: none;
+        }
+        .bcon a:hover{
+            color: #63B8FF; 
+        }
+        .list_lh{ 
+            height: 235px;
+            width: 100%;
+            overflow:hidden;
+        }
+        .list_lh ul{
+            padding-left: 0px;
+            list-style:none;
+        }
+        .lieven{
+            background-color: #eee;
+        }
+        .list_lh li p{ 
+            padding-left: 10px;
+            height:30px; 
+            line-height:30px;
+            margin: 0;
+            overflow: hidden;
+        }
+        .list_lh li p a{ 
+            float:left; 
+            text-decoration:none;
+            color: #333;
+            font-size: 14px;
+        }
+        .list_lh li p a:hover{
+            color: #63B8FF; 
+        }
+
+    </style>
+</head>
+<body>
+<div class="bcon">
+  <div class="title"><b>办件公示</b><a href="#">更多 ></a></div>
+  <div class="list_lh">
+    <ul>
+        <li><p><a target='_blank' href="http://baidu.com">武汉香华林商业发展有限公司</a></p></li>
+        <li><p><a target='_blank' href="http://baidu.com">武汉市海鼎置业有限责任公司</a></p></li>
+        <li><p><a target='_blank' href="http://baidu.com">武汉联发瑞盛置业有限公司</a></p></li>
+        <li><p><a target='_blank' href="http://baidu.com">武汉绿地滨江置业有限公司</a></p></li>
+        <li><p><a target='_blank' href="http://baidu.com">武汉联发瑞盛置业有限公司</a></p></li>
+        <li><p><a target='_blank' href="http://baidu.com">武汉泰天工程机械有限公司</a></p></li>
+        <li><p><a target='_blank' href="http://baidu.com">武汉三江航天嘉园房地产开发有限公司</a></p></li>
+        <li><p><a target='_blank' href="http://baidu.com">武汉双龙木业发展有限责任公司</a></p></li>
+        <li><p><a target='_blank' href="http://baidu.com">武汉舜安工贸有限公司</a></p></li>
+        <li><p><a target='_blank' href="http://baidu.com">鑫磊博览城有限公司</a></p></li>
+        <li><p><a target='_blank' href="http://baidu.com">武汉市江汉区房地产公司</a></p></li>
+        <li><p><a target='_blank' href="http://baidu.com">武汉运通置业有限公司</a></p></li>
+    </ul>
+  </div>  
+</div>
+    <script type="text/javascript">
+       $(function(){
+            $("div.list_lh").myScroll({
+                speed:40, //数值越大，速度越慢
+                rowHeight:30 //li的高度
+            });
+
+            $('li:even').addClass('lieven');
+
+            $('ul li a').myLink({
+                'color': '#111',
+                'fontSize': '13px'
+            })
+        });
+    </script>
+</body>
+</html>
